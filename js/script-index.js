@@ -11,6 +11,7 @@ $(document).ready( function(){
   *llamo a la funcion printNews
   */
   printNews();
+  renderActivities(activities);
 });
 
 /*
@@ -66,8 +67,22 @@ function renderRecipe(recipe) {
 /*
 * Función que se encarga de pintinputPhone4inputPhone4ar todas las actividades
 */
-function renderActivities(activitiesArray) {
-	console.log('Activities: ', activitiesArray);
+function renderActivities(activities) {
+  /*
+  *recorro la data con el for y le cambio el nombre
+  *en vez de activitiesArray lo dejo en activities como aparece en la data
+  */
+  for(var i = 0; i < activities.length; i++) {
+    renderActivity(activities[i]);
+    if (activities.length > 0) {
+      /*
+      *si se cumple la condicion desaparece el div con clase
+      *wrapper-message
+      */
+      $('.wrapper-message').hide();
+    }
+  }
+	console.log('Activities: ', activities);
 }
 
 /*
@@ -76,7 +91,8 @@ function renderActivities(activitiesArray) {
 * archivo "templates/templates-activity.html"
 */
 function renderActivity(recipe) {
-	
+
 }
+
 
 
