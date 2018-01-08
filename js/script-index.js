@@ -6,6 +6,10 @@ $(document).ready( function(){
 
 	//La variable "recipesArray" esta declarada en el archivo "data/recipes.js"
 	renderHighlightedRecipes(recipesArray);
+
+  /*
+  *llamo a la funcion printNews
+  */
   printNews();
 });
 
@@ -21,6 +25,7 @@ function printNews (){
 /*
 * Función que se encarga de pintar TODAS las recetas que tengan 
 * marcado el atributo "highlighted" como TRUE
+* recorro la data
 */
 function renderHighlightedRecipes(recipesArray) {
   for(var i = 0; i < recipesArray.length; i++){
@@ -36,15 +41,30 @@ function renderHighlightedRecipes(recipesArray) {
 * marcado el atributo "highlighted" como TRUE
 * Aqui se tiene que crear el HTML que esta en el 
 * archivo "templates/templates-recipe.html"
+* se crea la estructura html en donde aparece las recetas
 */
 function renderRecipe(recipe) {
+  $('.list-recipes').append('<a class="item-recipe" href="#">' +
+  '<span class="attribution">' +
+    '<span class="title-recipe">' + recipe.title + '</span>' +
+    '<span class="metadata-recipe">' +
+      '<span class="author-recipe">' + recipe.source.name + '</span>' +
+        '<span class="bookmarks-recipe">' +
+          '<span class="icon-bookmark">' +
+          '</span>' +
+        '</span>' +
+      '</span>' +
+  '</span>' +
+  '<img src="img/recipes/320x350/' + recipe.name + '.jpg"/>' +
+  '</a>');
+
 	console.log('Voy a pintar la receta: ', recipe);
 }
 
 
 
 /*
-* Función que se encarga de pintar todas las actividades
+* Función que se encarga de pintinputPhone4inputPhone4ar todas las actividades
 */
 function renderActivities(activitiesArray) {
 	console.log('Activities: ', activitiesArray);
