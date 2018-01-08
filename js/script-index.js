@@ -1,4 +1,7 @@
 $(document).ready( function(){
+  /*
+  *oculto el icono de flecha
+  */
   $('.js-back').hide();
 
 	//La variable "recipesArray" esta declarada en el archivo "data/recipes.js"
@@ -6,6 +9,14 @@ $(document).ready( function(){
 
 });
 
+/*
+*creando funcion PrintNews para agregar texto a elemento p
+*/
+function printNews (){
+  $('.callout-news p' ).append('Nuevas recetas');
+}
+
+printNews();
 
 /*
 * Función que se encarga de pintar TODAS las recetas que tengan 
