@@ -15,6 +15,11 @@ $(document).ready(function(){
 */
 $('.js-show-recipe').click(function(){
   $('#container').removeClass('make');
+  /*
+  * señalo navegacion en recipe
+  */
+  $('.js-show-recipe').addClass('active');
+  $('.js-show-make').removeClass('active');
   console.log('funkaa');
 })
 
@@ -23,5 +28,10 @@ $('.js-show-recipe').click(function(){
 */
 $('.js-show-make').click(function(){
   $('#container').addClass('make');
+  /*
+  * señalo navegacion en make it
+  */
+  $('.js-show-make').addClass('active');
+  $('.js-show-recipe').removeClass('active');
   console.log('funcionaaa');
 })
