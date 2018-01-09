@@ -35,3 +35,10 @@ $('.js-show-make').click(function(){
   $('.js-show-recipe').removeClass('active');
   console.log('funcionaaa');
 })
+
+/*
+* le doy funcionalidad al icono back y redirecciona a index.html
+*/
+$('.js-back').click(function(){
+  $('a').attr('href', 'index.html');
+})
